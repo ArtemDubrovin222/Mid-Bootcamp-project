@@ -1,4 +1,4 @@
-create database accidents;
+-- create database accidents;
 USE accidents;
 
 SELECT * 
@@ -17,8 +17,6 @@ GROUP BY month
 ORDER BY count(month) DESC;
 
 -- Injuries depending on light conditions
-Select light_conditions, injury_level, count(*) as injury_count
+Select light_conditions, count(injury_level) as injury_count
 From records
 group by light_conditions, injury_level;
-
-
